@@ -1,0 +1,1 @@
+GET http://localhost:3200/api/announcements/631ba39037a104076713b343

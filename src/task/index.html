@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task</title>
+</head>
+<body>
+    <form class="form" enctype="multipart/form-data">
+        <input type="text" name="id" class="title" placeholder="id" >
+        <input type="file" name="myfile" class="file">
+        <button>upload file</button>
+    </form>
+
+    <script>
+        const $ = (element)=> document.querySelector(element)
+
+        const file = $(".file")
+        const title = $(".title")
+        const content = $(".content")
+        const form = $(".form")
+        const id = "632a36e0d608fad6eecf86c4"
+
+        form.addEventListener("submit",(e)=>{
+            const formData = new FormData(form)
+            e.preventDefault()
+            fetch("http://localhost:3200/api/homework",{
+                method: "POST",
+                headers: {"authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDhmMzlhZWNkNWM4MzE2OTlmNTUyYiIsInR5cGVVc2VyIjoidGVhY2hlciIsImlhdCI6MTY2MzYzNTA4NH0.BzWyhr2dpzom1dwerfCYfH1waNVzSkufQx8cD4Pb7BE"},
+                body: formData
+            }).then(res=> res.json()).then(res=> console.log(res))
+        })
+    </script>
+</body>
+</html>

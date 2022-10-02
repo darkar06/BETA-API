@@ -1,0 +1,8 @@
+POST http://localhost:3200/api/teacher/find
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDhmMzlhZWNkNWM4MzE2OTlmNTUyYiIsInR5cGVVc2VyIjoidGVhY2hlciIsImlhdCI6MTY2MzczNTg0Nn0.Ert9sCHkuuuZdTwBZ8NRsfga-s_jaGb4hc1yKEs9-Do
+
+
+{
+    "name": "jonas"
+}

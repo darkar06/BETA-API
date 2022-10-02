@@ -1,0 +1,7 @@
+PUT http://localhost:3200/api/score
+Content-Type: application/json
+
+{
+    "userName": "paco",
+    "asignature": "naturales"
+}

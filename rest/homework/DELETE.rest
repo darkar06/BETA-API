@@ -1,0 +1,6 @@
+DELETE http://localhost:3200/api/homework
+Content-Type: application/json
+
+{
+    "id": "632a18abdaeaf46ea2e3dfc0"
+}

@@ -1,0 +1,10 @@
+POST http://localhost:3200/student
+Content-Type: application/json
+
+{
+    "name": "paca",
+    "password": "paca",
+    "email": "paca@gmail.com",
+    "curse": "1ro",
+    "section": "A"
+}

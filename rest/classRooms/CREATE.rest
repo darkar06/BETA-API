@@ -1,0 +1,9 @@
+POST http://localhost:3200/api/classroom
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDhmMzlhZWNkNWM4MzE2OTlmNTUyYiIsInR5cGVVc2VyIjoidGVhY2hlciIsImlhdCI6MTY2MzcxMDkyMn0.F04gEdgcAAAR8uEIH2ErkJlGCtjOwN4E5_MV1omAdpg
+
+{
+    "asignature": "sociales",
+    "curse": "1ro",
+    "section": "A"
+}

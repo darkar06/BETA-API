@@ -1,0 +1,6 @@
+POST http://localhost:3200/api/classroom
+Content-Type: application/json
+
+{
+    "id": "63000abef72f53364782a902"
+}

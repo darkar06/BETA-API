@@ -1,0 +1,6 @@
+DELETE http://localhost:3200/student
+Content-Type: application/json
+
+{
+    "userName": "juanito97112"
+}

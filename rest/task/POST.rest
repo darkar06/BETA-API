@@ -1,0 +1,7 @@
+POST http://localhost:3200/api/task
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMmEzNjg1ZDYwOGZhZDZlZWNmODZiYyIsInR5cGVVc2VyIjoic3R1ZGVudCIsImlhdCI6MTY2MzcxMDg3N30.lsi4fgDJ0uSoFRbjPeTIHF4wO-wT6Tl3H8ljQOyI7o0
+
+{
+    "id": "632a3740d608fad6eecf86d3"
+}

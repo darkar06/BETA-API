@@ -1,0 +1,8 @@
+POST http://localhost:3200/api/announcements
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMWI5OTBkYWFjNDA3ZWM1NWIwZDNlNCIsInR5cGVVc2VyIjoidGVhY2hlciIsImlhdCI6MTY2Mjc1MzA2Mn0.RtJccOwMOguFj_OIIJz1_b3k9eFkoH7ceH4h0dZmZKU
+
+{
+ "id": "631b994faac407ec55b0d3ea",
+ "content": "hola soy juan enmanuel gonzalez y hoy me complace presentarles la beta app, un servicio del politecnico parroquial betania para facilitar el manejonde los datos de la misma"   
+}
