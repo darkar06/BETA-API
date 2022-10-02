@@ -48,7 +48,7 @@ const errorHandler = require("./errorHandler")
 app.use(express.json())
 
 app.use((req,res,next)=>{
-  console.log("______________________________________")
+  console.log("__________________________________")
   console.log(req.path)
   console.log(req.body)
   next()
