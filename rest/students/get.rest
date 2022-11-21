@@ -1,0 +1,2 @@
+GET http://localhost:3200/api/student/find/name/a
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNjQyMzBmNGQ3YTU4YjY2Y2IyNjJlZSIsInR5cGVVc2VyIjoidGVhY2hlciIsImlhdCI6MTY2ODM5ODIzOX0.iUVui3c8vFXe7azajytHoRrmoxWkFyBpIxcl7-qVnBA

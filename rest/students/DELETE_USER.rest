@@ -1,6 +1,1 @@
-DELETE http://localhost:3200/student
-Content-Type: application/json
-
-{
-    "userName": "juanito97112"
-}
+DELETE http://localhost:3200/api/student/ramses38648

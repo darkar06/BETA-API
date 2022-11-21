@@ -14,12 +14,21 @@ const schema = new Schema({
 })
 
 
-schema.set("toJSON",{
-  transform: (document, returnedObject)=>{
+schema.set("toJSON", {
+  transform: (document, returnedObject) => {
     returnedObject.id = returnedObject._id
     delete returnedObject._id
     delete returnedObject.__v
   }
 })
+
+schema.pre("find", function (next) {
+  this.populate({
+    path: "student",
+    select: ["name", "userName"]
+  },)
+  next()
+})
+
 
 module.exports = model("Task", schema)

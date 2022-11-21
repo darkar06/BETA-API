@@ -1,10 +1,9 @@
-POST http://localhost:3200/student
+POST http://localhost:3200/api/student
 Content-Type: application/json
 
 {
-    "name": "paca",
-    "password": "paca",
-    "email": "paca@gmail.com",
+    "name": "edgar",
+    "email": "bryanemil1@hotmail.com",
     "curse": "1ro",
     "section": "A"
 }

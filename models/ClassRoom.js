@@ -24,7 +24,7 @@ const classRoomSchema = new Schema({
       ref: "Announcement"
     }
   ]
-  
+
 })
 
 
@@ -40,8 +40,16 @@ const classRoomSchema = new Schema({
 //   next()
 // })
 
-classRoomSchema.set("toJSON",{
-  transform: (document, returnedObject)=>{
+// classRoomSchema.pre("save", function (next) {
+//   this.populate([{
+//     path: "students",
+//     select: ["name", "userName", "curse"]
+//   }])
+//   next()
+// })
+
+classRoomSchema.set("toJSON", {
+  transform: (document, returnedObject) => {
     returnedObject.id = returnedObject._id
     delete returnedObject._id
     delete returnedObject.__v

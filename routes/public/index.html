@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recuperacion</title>
+</head>
+<body>
+    <form class="form">
+        <input class="contraseña" type="password" placeholder="nueva Contraceña">
+        <input class="confirmar" type="password" placeholder="confirmar Contraceña">
+        <button>cambiar</button>
+    </form>
+
+    <script>
+        const $ = element => document.querySelector(element)
+        const id = window.location.pathname.split("/")[3]
+
+        const form = $(".form")
+        const contraseña = $(".contraseña")
+        const confirmarContraseña = $(".confirmar")
+
+
+        form.addEventListener("submit", (e)=>{
+            e.preventDefault()
+            console.log(id)
+            console.log(contraseña.value)
+            if(contraseña.value !== confirmarContraseña.value) return alert("las contraceñas deben ser iguales")
+            else fetch("http://localhost:3200/api/login/password",{
+                method: "PUT",
+                headers: {"content-type": "application/json"},
+                body: JSON.stringify({
+                    password: contraseña.value,
+                    id
+                })
+            })
+                .then(res => res.json())
+                .then(res=> console.log(res))
+        })
+    </script>
+    
+</body>
+</html>

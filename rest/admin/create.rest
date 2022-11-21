@@ -1,0 +1,9 @@
+POST http://localhost:3200/api/admin/ppb071727
+Content-Type: application/json
+
+{
+    "name": "beta admin",
+    "password": "labetapassword",
+    "email": "betatech022@gmail.com",
+    "role": "admin"
+}

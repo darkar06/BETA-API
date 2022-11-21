@@ -4,47 +4,45 @@ const schema = new Schema({
   //   asignature: String,
   //   curse: String,
   //   section: String,
-  private: Boolean, // esto lo define el server
-  classroom: { type: Schema.Types.ObjectId, ref: "ClassRoom"},
+  classroom: { type: Schema.Types.ObjectId, ref: "ClassRoom" },
   author: { // esto lo pasa el token
     type: Schema.Types.ObjectId,
     ref: "Teacher",
     required: true
   },
-  content: {
-    type: String,
-    minlength: 100,
-    required: true
-  }
-  
+
+  title: String,
+  background: String,
+  content: String,
+
 })
 
-schema.pre("find", function(next) {
+schema.pre("find", function (next) {
   this.populate([{
-    path:  "classroom",
+    path: "classroom",
     select: "asignature"
-  },{
-    path:  "author",
+  }, {
+    path: "author",
     select: "userName"
   }])
 
   next()
 })
 
-schema.pre("save", function(next) {
+schema.pre("save", function (next) {
   this.populate([{
-    path:  "classroom",
-    select: ["asignature", {id: false}]
-  },{
-    path:  "author",
+    path: "classroom",
+    select: ["asignature", { id: false }]
+  }, {
+    path: "author",
     select: "name"
   }])
 
   next()
 })
 
-schema.set("toJSON",{
-  transform: (document, returnedObject)=>{
+schema.set("toJSON", {
+  transform: (document, returnedObject) => {
     returnedObject.id = returnedObject._id
     delete returnedObject._id
     delete returnedObject.__v

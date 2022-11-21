@@ -8,16 +8,16 @@ const studentSchema = new Schema({
   curse: String,
   section: String,
   userType: String,
-  skills:[
+  skills: [
     String
   ],
-  scores:[
+  scores: [
     {
       type: Schema.Types.ObjectId,
       ref: "Score"
     }
   ],
-  classRooms: [
+  classrooms: [
     {
       type: Schema.Types.ObjectId,
       ref: "ClassRoom"
@@ -31,8 +31,8 @@ const studentSchema = new Schema({
   ]
 })
 
-studentSchema.set("toJSON",{
-  transform: (document, returnedObject)=>{
+studentSchema.set("toJSON", {
+  transform: (document, returnedObject) => {
     delete returnedObject._id
     delete returnedObject.__v
     delete returnedObject.password

@@ -1,2 +1,1 @@
-POST http://localhost:3200/api/announcements/get
-Content-Type: application/json
+GET http://localhost:3200/api/announcements

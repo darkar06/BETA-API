@@ -2,9 +2,9 @@ POST http://localhost:3200/api/teacher
 Content-Type: application/json
 
 {
-    "name": "juan",
-    "password": "juan",
-    "email": "juan@gmail.com",
-    "asignature": "lengua española",
-    "curses": ["3ro"]
+    "name": "pablito02",
+    "password": "pablito02",
+    "email": "pablito02@gmail.com",
+    "asignatures": ["lengua española"],
+    "curses": ["1ro"]
 }

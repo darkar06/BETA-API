@@ -5,15 +5,15 @@ const TeacherSchema = new Schema({
   userName: String,
   password: String,
   email: String,
-  asignature: String,
-  curses :[String], //estos son los cursos a los que se les impartira clasese
+  asignatures: [String],
+  curses: [String], //estos son los cursos a los que se les impartira clasese
   userType: String,
-  classRooms: [
+  classrooms: [
     {
       type: Schema.Types.ObjectId,
       ref: "ClassRoom"
     }
-  ],  
+  ],
   announcements: [
     {
       type: Schema.Types.ObjectId,
@@ -22,8 +22,8 @@ const TeacherSchema = new Schema({
   ]
 })
 
-TeacherSchema.set("toJSON",{
-  transform: (document, returnedObject)=>{
+TeacherSchema.set("toJSON", {
+  transform: (document, returnedObject) => {
     delete returnedObject._id
     delete returnedObject.__v
     delete returnedObject.password
